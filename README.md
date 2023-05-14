@@ -9,6 +9,16 @@ mkdir js7-controller-primary
 mkdir js7-joc-primary-config
 mkdir js7-joc-primary-logs
 
+.
+├── .env
+├── db_data
+├── docker-compose.yml
+├── hibernate.cfg.xml
+├── js7-agent-primary
+├── js7-controller-primary
+├── js7-joc-primary-config
+└── js7-joc-primary-logs
+
 docker-compose -f  docker-compose.yml up -d
 cp -f hibernate.cfg.xml js7-joc-primary-config/
 docker compose exec js7-joc-primary /bin/sh -c /opt/sos-berlin.com/js7/joc/install/joc_install_tables.sh
